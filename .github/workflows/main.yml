@@ -2,13 +2,13 @@ name: lede
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
     runs-on: ubuntu-18.04
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: Install build dependencies
@@ -18,19 +18,19 @@ jobs:
     - name: Clone source
       run: |
         cd /home/runner
-        git clone https://github.com/coolsnowwolf/lede.git
+        git clone https://github.com/breakersun/lede.git
         sudo chmod -R 777 lede
         sudo chown -R runner:runner lede
         cd /home/runner/lede
-        ./scripts/feeds update -a 
+        ./scripts/feeds update -a
         ./scripts/feeds install -a
     - name: Clone config
       run: |
         cd /home/runner/lede/
-        wget https://raw.githubusercontent.com/wky0211/build-lede/master/.config
+        wget https://raw.githubusercontent.com/breakersun/build-lede/master/.config
     - name: Build
-      run: | 
-        cd /home/runner/lede 
+      run: |
+        cd /home/runner/lede
         make -j2
     - uses: actions/upload-artifact@master
       with:
