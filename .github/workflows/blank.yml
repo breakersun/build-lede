@@ -13,5 +13,8 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        echo Example print OK.
+    - name: github-action-publish-binaries
+      uses: skx/github-action-publish-binaries@release-1.2
+
+
