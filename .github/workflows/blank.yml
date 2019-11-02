@@ -16,5 +16,7 @@ jobs:
         echo Example print OK.
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
 
 
