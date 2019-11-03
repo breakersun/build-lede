@@ -21,6 +21,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       with:
-        args: '.config'
+        args: 'test.md'
 
 
