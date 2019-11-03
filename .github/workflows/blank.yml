@@ -17,6 +17,7 @@ jobs:
       run: |
         echo Example print OK.
         cp ./test/test.md ./
+        ls
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-1.2
       env:
