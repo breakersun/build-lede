@@ -11,8 +11,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
     - name: Run a multi-line script
       run: |
         echo Example print OK.
@@ -21,6 +19,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       with:
-        args: 'test.md'
+        args: './test/test.md'
 
 
