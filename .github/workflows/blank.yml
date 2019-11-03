@@ -16,11 +16,12 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Example print OK.
+        cp ./test/test.md ./
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-1.2
       env:
         GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
       with:
-        args: './test/test.md'
+        args: 'test.md'
 
 
