@@ -14,13 +14,15 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Example print OK.
+        
     - uses: mr-smithers-excellent/docker-build-push@v1.0
+    - name: docker build
       with:
         image: breakersun/openwrt
         tag: debug
         registry: docker.io
         dockerfile: Dockerfile.aarch64.arm64v8
-  		  username: ${{ secrets.DOCKER_USERNAME }}
-  		  password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{secrets.DOCKER_USERNAME}}
+        password: ${{secrets.DOCKER_PASSWORD}}
 
 
