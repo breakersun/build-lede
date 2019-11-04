@@ -16,7 +16,6 @@ jobs:
         echo Example print OK.
         
     - uses: mr-smithers-excellent/docker-build-push@v1.0
-    - name: docker build
       with:
         image: breakersun/openwrt
         tag: debug
